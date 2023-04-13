@@ -1,19 +1,8 @@
-﻿// ConsoleAppIML.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
+﻿/* 01.07.2020 */
+/* 13.04.2023 */
 
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
-
-
-/* 01.07.2020 */
 #define _CRT_SECURE_NO_WARNINGS
+
 #include <iostream>
 #include <string>
 #include <cstdio>
@@ -22,7 +11,6 @@
 #include <vector>
 #include <stack>
 #include <algorithm>
-
 
 using namespace std;
 
@@ -124,7 +112,7 @@ int put(const string& buf) {
 
 class Scanner {
     FILE* fp;
-    char c;
+    char  c;
     fpos_t pos;
     int look(const string buf, const char** list) {
         int i = 0;
@@ -135,10 +123,9 @@ class Scanner {
         }
         return 0;
     }
-    void gc() {                                        
+    void gc() {
         c = fgetc(fp);
     }
- 
 public:
     static const char* TW[], * TD[];
     Scanner(const char* program) {
@@ -339,11 +326,11 @@ void Parser::P() {
     else
         throw curr_lex;
     D1();
-     if (c_type == LEX_SEMICOLON)
+    if (c_type == LEX_SEMICOLON)
         gl();
     else
         throw curr_lex;
-     B();
+    B();
 }
 
 void Parser::D1() {
@@ -534,7 +521,7 @@ void Parser::S() {
             }
         }
         else
-            throw curr_lex;    
+            throw curr_lex;
     }//assign-end
     else
         B();
@@ -871,5 +858,3 @@ int main() {
         return 1;
     }
 }
-
-
