@@ -112,7 +112,7 @@ int put(const string& buf) {
 
 class Scanner {
     FILE* fp;
-    char  c;
+    char   c;
     fpos_t pos;
     int look(const string buf, const char** list) {
         int i = 0;
@@ -519,6 +519,8 @@ void Parser::S() {
                 --id_cnt;
                 poliz.push_back(Lex(LEX_ASSIGN));
             }
+            if (c_type == LEX_SEMICOLON)
+                poliz.push_back(Lex(LEX_SEMICOLON));
         }
         else
             throw curr_lex;
@@ -816,6 +818,10 @@ void Executer::execute(vector<Lex>& poliz) {
             TID[j].put_value(i);
             TID[j].put_assign();
             args.push(i);
+            break;
+
+        case LEX_SEMICOLON:
+            from_st(args, i);
             break;
 
         default:
