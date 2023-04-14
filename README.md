@@ -1,2 +1,6 @@
-# ConsoleAppIML По итогам курса Системы программирования https://teach-in.ru/course/programming-systems/about доработан интерпретатор модельного языка программирования
-Source.cpp исходный файл https://cmcmsu.info/2course/model.lang.interpreter.sample.htm
+По итогам курса Системы программирования (https://teach-in.ru/course/programming-systems/about) я доработал интерпретатор модельного паскалеподобного языка программирования, добавил обработку инстркции присваивания с семантикой похожей на семантику языка C.
+В результате доработки верно интрерпритируютя инструкции вида
+x := y := 1 ; 
+Source.cpp исходный файл c htcehcf https://cmcmsu.info/2course/model.lang.interpreter.sample.htm
+ConsoleAppIML.cpp доработанный мною интерпретатор
+prog.txt пример программы модельного языка
