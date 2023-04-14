@@ -2,6 +2,6 @@
 В результате доработки верно интрерпретируютя инструкции вида
 x := y := 1 ; 
 Описание файлов репозитория:
-Source.cpp        исходный файл c учебного ресурса https://cmcmsu.info/2course/model.lang.interpreter.sample.htm
-ConsoleAppIML.cpp доработанный мною интерпретатор
-prog.txt          пример программы модельного языка
+Source.cpp - исходный файл c учебного ресурса https://cmcmsu.info/2course/model.lang.interpreter.sample.htm;
+ConsoleAppIML.cpp - доработанный мною интерпретатор;
+prog.txt-пример программы модельного языка.
