@@ -402,8 +402,7 @@ void Parser::B() {
 void Parser::S() {
     int pl0, pl1, pl2, pl3;
     int id_cnt = 0;
-    type_of_lex  c_prev_type;
-    int          c_prev_val;
+    int c_prev_val;
 
     if (c_type == LEX_IF) {
         gl();
@@ -496,7 +495,6 @@ void Parser::S() {
             while (c_type == LEX_ID) {
                 check_id();
                 scan.store_pos();
-                c_prev_type = c_type;
                 c_prev_val  = c_val;
                 gl();
                 if (c_type == LEX_ASSIGN) {
